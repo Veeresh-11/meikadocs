@@ -1,0 +1,42 @@
+export function LogoVariation4Transparent() {
+  return (
+    <svg viewBox="0 0 128 128" className="w-full h-full">
+      <defs>
+        <linearGradient id="gradLeftTrans" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#6366F1" />
+        </linearGradient>
+        <linearGradient id="gradRightTrans" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#8B5CF6" />
+        </linearGradient>
+      </defs>
+      
+      {/* Left diamond - Local */}
+      <path
+        d="M 44 64 L 64 44 L 64 64 L 64 84 Z"
+        fill="url(#gradLeftTrans)"
+      />
+      
+      {/* Right diamond - Cloud */}
+      <path
+        d="M 64 44 L 84 64 L 64 84 L 64 64 Z"
+        fill="url(#gradRightTrans)"
+      />
+      
+      {/* Outer frame for definition */}
+      <path
+        d="M 64 36 L 92 64 L 64 92 L 36 64 Z"
+        fill="none"
+        stroke="#8B5CF6"
+        strokeWidth="2.5"
+      />
+      
+      {/* Center fusion line */}
+      <line x1="64" y1="44" x2="64" y2="84" stroke="#ffffff" strokeWidth="3" opacity="0.6" />
+      
+      {/* Center highlight */}
+      <circle cx="64" cy="64" r="3" fill="#ffffff" opacity="0.8" />
+    </svg>
+  );
+}
